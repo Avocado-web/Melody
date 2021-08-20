@@ -1,0 +1,76 @@
+.modal
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.8)
+  display: flex
+  justify-content: center
+  align-items: center
+  opacity: 0
+  transform: scale(0)
+  transition: opacity, 0.2s
+  // display: none
+  &-dialog
+    position: relative
+    display: flex
+    max-width: 1000px
+    min-height: 565px
+    background-color: $light
+    flex-grow: 1
+  &-image
+    width: 60%
+    background-color: #EBEBEB
+    text-align: center
+    padding: 50px
+    &__title
+      margin-bottom: 26px
+  &-info
+    width: 40%
+    padding: 50px 46px
+    &__title
+      margin-bottom: 55px
+  &-title
+      font-family: "Bebas Neue", sans-serif
+      font-style: normal
+      font-weight: normal
+      font-size: 24px
+      line-height: 29px
+  &__alert
+    font-style: italic
+    font-weight: normal
+    font-size: 16px
+    line-height: 19px
+    color: #635854
+  &-close
+    &-button
+      position: absolute
+      top: 38px
+      right: 27px
+      background-color: $light
+  &__flats
+    &-path
+      opacity: 0
+      cursor: pointer
+      &:hover
+        opacity: 1
+.flat
+  &-list
+    margin-bottom: 56px
+  &__link
+    font-family: "Roboto", sans-serif
+    font-style: normal
+    font-weight: normal
+    font-size: 16px
+    line-height: 19px
+    color: #635854
+    &:hover
+      text-decoration-line: underline
+      color: #3596F5
+  &__item
+    margin-bottom: 10px
+
+.modal-is-open
+  opacity: 1
+  transform: scale(1)
